@@ -1,0 +1,18 @@
+[project]
+name = "isitup.sh"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Hayden King", email = "haydenk@users.noreply.github.com"},
+]
+dependencies = ["fastapi[standard]>=0.116.1", "gunicorn>=23.0.0"]
+requires-python = "==3.13.*"
+readme = "README.md"
+license = {text = "GPLv3"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+dev = {cmd = "fastapi dev main.py"}
